@@ -6,4 +6,26 @@ jobs:
   Explore-Github-Actions:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo " Je dois utiliser Docker"
+    
+      #checkout the code
+      -name: Check
+       uses: actions/checkout@1
+       
+      # Log in to Docker Hub
+      -name: Login Docker Hub
+       uses: docker/login-action@1
+      with:
+          username: ${{ secrets.BioLAB }}
+          password: ${{ secrets.BioLAB123 }}
+          
+      # Build Docker image
+       - name: Build Docker image
+        run: docker build -t ${{ secrets.BioLAB }}/The-Image:latest .
+
+      # Push Docker image to Docker Hub
+      - name: Push Docker image
+        run: docker push ${{ secrets.BioLAB }}/The-Image:latest
+        
+      
+      
+      
