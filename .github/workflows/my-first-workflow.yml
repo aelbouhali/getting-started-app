@@ -8,8 +8,8 @@ jobs:
     steps: 
     
       #checkout the code
-      -name: Checkout
-       uses: actions/checkout@v4.2.2
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
        
    
         
