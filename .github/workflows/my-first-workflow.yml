@@ -1,1 +1,9 @@
 # Ecrire un Github actions qui utilise un Dockerfile pour build une image et la pousser sur le Docker hub. Il se déclenche un push sur la branche main
+
+name: Github Actions Demo
+on: [push]
+jobs: 
+  Explore-Github-Actions:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo " Je dois utiliser Docker"
