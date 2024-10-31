@@ -19,7 +19,7 @@ jobs:
                password: ${{ secrets.Password }}
       # Build Docker image
       - name: Build Docker image
-        run: docker build -t ${{ secrets.Username }}/ubuntu-latest .
+        run: docker build -t ${{ secrets.Username }}/Image:latest .
         
       
       
