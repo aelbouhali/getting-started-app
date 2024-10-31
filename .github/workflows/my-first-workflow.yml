@@ -8,8 +8,8 @@ jobs:
     steps: 
     
       #checkout the code
-      -name: Check
-       uses: actions/checkout
+      -name: Checkout
+       uses: actions/Checkout
        
       # Log in to Docker Hub
       -name: Login Docker Hub
