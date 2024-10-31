@@ -15,8 +15,8 @@ jobs:
       - name: Login Docker Hub
         uses: docker/login-action@v3.3.0
         with :
-               username: ${{ secrets.NeoLAB }}
-               password: ${{ secrets.NeoLAB123 }}
+               username: ${{ secrets }}
+               password: ${{ secrets. }}
    
         
       
