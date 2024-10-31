@@ -9,11 +9,11 @@ jobs:
     
       #checkout the code
       -name: Check
-       uses: actions/checkout@1
+       uses: actions/checkout
        
       # Log in to Docker Hub
       -name: Login Docker Hub
-       uses: docker/login-action@1
+       uses: docker/login-action
       with:
           username: ${{ secrets.BioLAB }}
           password: ${{ secrets.BioLAB123 }}
