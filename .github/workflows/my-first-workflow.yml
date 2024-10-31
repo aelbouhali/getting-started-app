@@ -17,9 +17,13 @@ jobs:
         with :
                username: ${{ secrets.Username }}
                password: ${{ secrets.Password }}
-      # Build Docker image
+      # Build and Docker image
       - name: Build Docker image
-        run: docker build -t ${{ secrets.Username }}/Image:latest .
+        uses: docker/build-push-action@v3
+        with: 
+            context: .
+            push: true
+          
         
       
       
