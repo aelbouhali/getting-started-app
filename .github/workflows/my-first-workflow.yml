@@ -9,22 +9,9 @@ jobs:
     
       #checkout the code
       -name: Checkout
-       uses: actions/checkout@v2
+       uses: actions/checkout@v4.2.2
        
-      # Log in to Docker Hub
-      -name: Login Docker Hub
-       uses: docker/login-action@v2
-      with:
-          username: ${{ secrets.BioLAB }}
-          password: ${{ secrets.BioLAB123 }}
-          
-      # Build Docker image
-       - name: Build Docker image
-        run: docker build -t ${{ secrets.BioLAB }}/The-Image:latest .
-
-      # Push Docker image to Docker Hub
-      - name: Push Docker image
-        run: docker push ${{ secrets.BioLAB }}/The-Image:latest
+   
         
       
       
